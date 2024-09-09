@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>привет</title>
+    <link rel="stylesheet" href="styles.css"/>
+    <script src="scripts.js"></script>
+</head>
+<body>
+<header>
+    <div class="name">
+        Мамонтов Александр Станиславович
+    </div>
+    <div class="group-n-variant">
+        <div class="group">
+            P3125
+        </div>
+        <div class="variant">
+            409073
+        </div>
+    </div>
+</header>
+<main>
+    <div class="square-container">
+    <div class="square"></div>
+    </div>
+    <div class="main-info">
+        <div class="graph">
+            <canvas id="canvas"></canvas>
+        </div>
+        <div class="inputs">
+            <form onsubmit="submitForm(event)" class="form" method="post" autocomplete="off">
+                <p class="x-text">Выберите х:</p>
+                <div class="x">
+                    <label>
+                        <input type="radio" name="x1" value="-3"/>
+                        -3
+                    </label>
+                    <label>
+                        <input type="radio" name="x1" value="-2"/>
+                        -2
+                    </label>
+                    <label>
+                        <input type="radio" name="x1" value="-1"/>
+                        -1
+                    </label>
+                    <label>
+                        <input type="radio" name="x1" value="0"/>
+                        0
+                    </label>
+                    <label>
+                        <input type="radio" name="x1" value="1"/>
+                        1
+                    </label>
+                    <label>
+                        <input type="radio" name="x1" value="2"/>
+                        2
+                    </label>
+                    <label>
+                        <input type="radio" name="x1" value="3"/>
+                        3
+                    </label>
+                    <label>
+                        <input type="radio" name="x1" value="4"/>
+                        4
+                    </label>
+                    <label>
+                        <input type="radio" name="x1" value="5"/>
+                        5
+                    </label>
+                </div>
+                <div class="y-container">
+                    <input type="text" name="y" id="y" autocomplete="off" required/>
+                    <label class="text" for="y">
+                        Введите Y (-3; 5)
+                    </label>
+                </div>
+                <div class="r-container">
+                    <input type="text" name="r" id="r" autocomplete="off" required/>
+                    <label class="text" for="r">
+                        Введите R (1; 4)
+                    </label>
+                </div>
+                <button type="submit" class="sendDataButton">Отправить данные</button>
+            </form>
+        </div>
+    </div>
+    <div class="table">
+
+    </div>
+    <div class="circle"></div>
+</main>
+<script src="canvas.js"></script>
+</body>
+</html>
