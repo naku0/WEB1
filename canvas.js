@@ -68,7 +68,7 @@ function drawTriangle(x,y) {
 
 function drawCoords() {
     ctx.fillStyle = 'black';
-    ctx.font = '1.25em Montserrat';
+    ctx.font = '1.25em Montserrat, sans-serif';
     ctx.textAlign = 'center';
     ctx.textBaseline = 'bottom';
     ctx.fillText('R/2', 280, 230);
