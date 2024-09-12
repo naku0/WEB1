@@ -1,0 +1,21 @@
+networks:
+  web1:
+
+services:
+  backend:
+    build:
+      context: ./back
+    networks:
+      -web1:
+
+
+  nginx:
+    build:
+      context: ./nginx
+      dockerfile: ./Dockerfile
+    ports:
+      - "8000:80"
+    depends_on:
+      -backend
+    networks:
+      -web1

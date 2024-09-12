@@ -1,16 +1,22 @@
-const url = "http://localhost:8080/";
+const url = "/api/";
 
 function submitForm(event) {
     event.preventDefault();
-    let x = document.querySelector('input[type="radio"]:checked');
-    let y = document.getElementById("y").value;
-    let r = document.getElementById("r").value;
+    const x = document.querySelector('input[type="radio"]:checked');
+    const y = document.getElementById("y");
+    const r = document.getElementById("r");
     if (!x) {
-        alert("hui")
     } else {
-        sendData(x,y,r);
+        if (((-3)<=y.value && y.value<=5) && (1<=r.value&& r.value<=4)) {
+            sendData(x, y, r);
+        }else{
+            y.classList.add("wrong");
+            r.classList.add("wrong");
+        }
     }
 }
+
+
 
 function sendData(x, y, r) {
     fetch(url, {

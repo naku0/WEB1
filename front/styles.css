@@ -19,6 +19,7 @@
     --black-text: #424242;
     --blue: #48CFCB;
     --dark-blue: #229799;
+    --red: #E53935;
 }
 
 body {
@@ -211,6 +212,12 @@ input:valid ~ label.text {
 
 input {
     background-color: var(--background-white);
+}
+
+input.wrong{
+    border: 2px solid var(--red);
+    background-color: var(--red);
+    cursor: pointer;
 }
 
 input:hover {
