@@ -8,9 +8,10 @@ COPY src/ /opt/user/myapp/src/
 WORKDIR /opt/user/myapp
 
 RUN echo "Main-Class: Main" > MANIFEST.MF
-RUN echo "Class-Path: lib/fastcgi-lib.jar" >> MANIFEST.MF
-RUN jar -cvmf web.jar MANIFEST.MF -C src/ . -C lib fastcgi-lib.jar
+RUN echo "Class-Path: ./lib/fastcgi-lib.jar" >> MANIFEST.MF
+RUN javac -cp lib/fastcgi-lib.jar src/*.java
+RUN jar -cvfm web.jar MANIFEST.MF -C src/ . -C lib fastcgi-lib.jar .
 
-EXPOSE 7007
+EXPOSE 2288
 
-CMD ["java", "-DFCGI_PORT=7007", "-jar", "web.jar"]
+CMD ["java", "-DFCGI_PORT=2288", "-jar", "web.jar"]

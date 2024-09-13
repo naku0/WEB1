@@ -1,10 +1,12 @@
-const reg = /\d/;
-const input = document.querySelector('input[type="text"]');
-const inputFilter = (event) => {
+const regY = /^[0-5](\.\d)?$/;
+const regR = /^[1-4](\.\d)?$/;
+const inputY = document.getElementById('y');
+const inputR = document.getElementById('r');
+const inputFilter = (event, regex) => {
     let symbol = String.fromCharCode(event.keyCode);
-    if(!reg.test(symbol)) {
+    if(!regex.test(symbol)) {
         event.preventDefault();
     }
 };
-
-input.addEventListener('keypress', inputFilter);
+inputY.addEventListener('keypress', (event)=>(inputFilter(event, regY)));
+inputR.addEventListener('keypress', (event)=>(inputFilter(event, regR)));

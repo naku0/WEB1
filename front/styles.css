@@ -57,7 +57,7 @@ header {
 
 main {
     display: flex;
-    place-content: space-evenly;
+    place-content: center;
     height: auto;
     width: auto;
 }
@@ -128,7 +128,7 @@ main {
 .main-info {
     display: flex;
     flex-direction: column;
-    place-content: space-evenly;
+    place-content: center;
 }
 
 .inputs {
@@ -214,9 +214,9 @@ input {
     background-color: var(--background-white);
 }
 
-input.wrong{
+input.wrong {
     border: 2px solid var(--red);
-    background-color: var(--red);
+    background-color: rgba(var(--red), 0.8);
     cursor: pointer;
 }
 
@@ -240,6 +240,51 @@ canvas {
     border: 2px solid var(--dark-blue);
     background-color: var(--background-white);
 }
+
+.table {
+    display: flex;
+    flex-direction: column;
+    border: 2px var(--dark-blue) solid;
+    border-radius: 30px;
+    margin: 0 0 0 5%;
+    border-collapse: collapse;
+    overflow: scroll;
+    max-height: 600px;
+    height: fit-content;
+    transition: all .3s ease-in-out;
+}
+
+.table-head {
+    width: 500px;
+    height: 50px;
+    border-bottom: 2px solid var(--dark-blue);
+}
+
+.item {
+    width: 100px;
+    height: 50px;
+    padding: 1%;
+    display: table-cell;
+    text-align: center;
+}
+
+.row{
+    width: 500px;
+}
+
+th:nth-child(-n+3), td:nth-child(-n+3) {
+    width: 50px;
+}
+
+
+th:nth-last-child(-n+2), td:nth-last-child(-n+2) {
+    width: 125px;
+}
+
+.item:not(:last-child) {
+    border-right: 2px solid var(--dark-blue);
+}
+
 
 @media only screen and (max-width: 85em) {
     header {
@@ -285,6 +330,26 @@ canvas {
             padding: 4%;
             margin-top: 5%;
         }
+    }
+
+
+
+    .table-head {
+        width: 400px;
+        font-size: 0.6em;
+    }
+
+    .row {
+        font-size: 0.9em;
+    }
+
+    .item {
+        padding: 1% 4%;
+    }
+
+    .table{
+        width: 400px;
+        margin: 3% 0 0 0;
     }
 
 }

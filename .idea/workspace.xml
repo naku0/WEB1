@@ -5,18 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b3d930f6-6b86-43b2-aa76-01d07d780a7c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/back/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nginx/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nginx/default.conf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/lab1.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/canvas.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/back/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/back/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/FigureChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/FigureChecker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/JSONParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/JSONParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/RequestHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/RequestHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/ResponseHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/ResponseHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/front/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/regex.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/regex.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/scripts.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/scripts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/front/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nginx/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/nginx/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nginx/default.conf" beforeDir="false" afterPath="$PROJECT_DIR$/nginx/default.conf" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +78,7 @@
       <workItem from="1725724276563" duration="18979000" />
       <workItem from="1725884424714" duration="737000" />
       <workItem from="1725903270199" duration="2491000" />
-      <workItem from="1726058178558" duration="6333000" />
+      <workItem from="1726058178558" duration="33273000" />
     </task>
     <servers />
   </component>
