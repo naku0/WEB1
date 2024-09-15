@@ -20,6 +20,7 @@ function drawAxis() {
     ctx.lineWidth = 2;
     ctx.stroke();
 }
+
 function drawGrid() {
     ctx.beginPath();
     for (let x = 0; x < 400; x += 40) {
@@ -37,31 +38,32 @@ function drawGrid() {
         ctx.stroke();
     }
 }
+
 function drawCircle(x, y, r) {
     ctx.beginPath();
     ctx.moveTo(x, y);
     ctx.fillStyle = '#48CFCB';
-    ctx.arc(x, y, r, Math.PI*0.5, Math.PI, false);
+    ctx.arc(x, y, r, Math.PI * 0.5, Math.PI, false);
     ctx.closePath();
     ctx.fill();
 }
 
-function drawRect(x,y) {
+function drawRect(x, y) {
     ctx.beginPath();
     ctx.moveTo(x, y);
     ctx.fillStyle = '#48CFCB';
-    ctx.rect(x, y, 40-x, 40-y);
+    ctx.rect(x, y, 40 - x, 40 - y);
     ctx.closePath();
     ctx.fill();
 
 }
 
-function drawTriangle(x,y) {
+function drawTriangle(x, y) {
     ctx.beginPath();
     ctx.moveTo(x, y);
     ctx.fillStyle = '#48CFCB';
-    ctx.lineTo(x+80, y);
-    ctx.lineTo(x, y-160);
+    ctx.lineTo(x + 80, y);
+    ctx.lineTo(x, y - 160);
     ctx.closePath();
     ctx.fill();
 }
@@ -74,14 +76,14 @@ function drawCoords() {
     ctx.fillText('R/2', 280, 230);
     ctx.beginPath();
     ctx.moveTo(280, 195);
-    ctx.lineTo(280,205);
+    ctx.lineTo(280, 205);
     ctx.strokeStyle = 'black';
     ctx.closePath();
     ctx.stroke();
     ctx.fillText('R', 360, 230);
     ctx.beginPath();
     ctx.moveTo(360, 195);
-    ctx.lineTo(360,205);
+    ctx.lineTo(360, 205);
     ctx.strokeStyle = 'black';
     ctx.stroke();
     ctx.closePath();
@@ -102,14 +104,14 @@ function drawCoords() {
     ctx.beginPath();
     ctx.fillText('-R/2', 120, 230);
     ctx.moveTo(120, 195);
-    ctx.lineTo(120,205);
+    ctx.lineTo(120, 205);
     ctx.strokeStyle = 'black';
     ctx.closePath();
     ctx.stroke();
     ctx.beginPath();
     ctx.fillText('-R', 40, 230);
     ctx.moveTo(40, 195);
-    ctx.lineTo(40,205);
+    ctx.lineTo(40, 205);
     ctx.strokeStyle = 'black';
     ctx.closePath();
     ctx.stroke();
@@ -131,9 +133,19 @@ function drawCoords() {
 }
 
 drawGrid();
-drawCircle(200,200,80);
-drawRect(200,200);
-drawTriangle(200,200);
+drawCircle(200, 200, 80);
+drawRect(200, 200);
+drawTriangle(200, 200);
 drawAxis();
 drawCoords();
+
+export default function drawDot(x, y, r, status) {
+    console.log("dot has been drawn");
+    const formula = (coord, radius) => (200 + coord * 40) / radius;
+    ctx.fillStyle = status ? 'green' : 'red';
+    ctx.beginPath();
+    ctx.arc(formula(x,r), formula(y,r), 5, 0, 2 * Math.PI);
+    ctx.closePath();
+    ctx.fill();
+}
 

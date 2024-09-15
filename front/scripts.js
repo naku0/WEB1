@@ -1,3 +1,5 @@
+import drawDot from "./canvas";
+
 const url = "/api/";
 
 function submitForm(event) {
@@ -35,6 +37,9 @@ function sendData(x, y, r) {
         response.json()
             .then(data => {
                 addToTable(x.value,y.value,r.value,data.status,data.time,new Date().toLocaleTimeString());
+                console.log("row added");
+                drawDot(x.value,y.value,r.value, data.status);
+                console.log("dot has been drawn");
                 y.classList.remove("wrong");
                 r.classList.remove("wrong");
             });

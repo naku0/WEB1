@@ -257,7 +257,6 @@ canvas {
 .table-head {
     width: 500px;
     height: 50px;
-    border-bottom: 2px solid var(--dark-blue);
 }
 
 .item {
@@ -270,6 +269,7 @@ canvas {
 
 .row{
     width: 500px;
+    border-top: 2px solid var(--dark-blue);
 }
 
 th:nth-child(-n+3), td:nth-child(-n+3) {
@@ -320,7 +320,6 @@ th:nth-last-child(-n+2), td:nth-last-child(-n+2) {
         }
     }
 
-;
     main {
         display: flex;
         flex-direction: column;
@@ -332,24 +331,31 @@ th:nth-last-child(-n+2), td:nth-last-child(-n+2) {
         }
     }
 
-
-
-    .table-head {
-        width: 400px;
-        font-size: 0.6em;
-    }
-
-    .row {
-        font-size: 0.9em;
-    }
-
     .item {
-        padding: 1% 4%;
+        font-size: 0.8em;
+        width: 60px;
     }
 
     .table{
-        width: 400px;
         margin: 3% 0 0 0;
+
+    }
+
+    .table-head{
+        width: 400px;
+    }
+
+    .row{
+        width: 400px;
+    }
+
+    th:nth-child(-n+3), td:nth-child(-n+3) {
+        width: 40px;
+    }
+
+
+    th:nth-last-child(-n+2), td:nth-last-child(-n+2) {
+        width: 110px;
     }
 
 }
