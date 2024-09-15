@@ -353,9 +353,7 @@ th:nth-last-child(-n+2), td:nth-last-child(-n+2) {
         width: 40px;
     }
 
-
     th:nth-last-child(-n+2), td:nth-last-child(-n+2) {
         width: 110px;
     }
-
 }

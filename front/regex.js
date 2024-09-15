@@ -1,4 +1,4 @@
-const regY = /^[0-5](\.\d)?$/;
+const regY = /^\d$/;
 const regR = /^[1-4](\.\d)?$/;
 const inputY = document.getElementById('y');
 const inputR = document.getElementById('r');

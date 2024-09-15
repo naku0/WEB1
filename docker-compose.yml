@@ -17,7 +17,7 @@ services:
       context: ./
       dockerfile: ./nginx/Dockerfile
     ports:
-      - "5830:80"
+      - "5835:80"
     depends_on:
       - backend
     networks:

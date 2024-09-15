@@ -139,13 +139,5 @@ drawTriangle(200, 200);
 drawAxis();
 drawCoords();
 
-export default function drawDot(x, y, r, status) {
-    console.log("dot has been drawn");
-    const formula = (coord, radius) => (200 + coord * 40) / radius;
-    ctx.fillStyle = status ? 'green' : 'red';
-    ctx.beginPath();
-    ctx.arc(formula(x,r), formula(y,r), 5, 0, 2 * Math.PI);
-    ctx.closePath();
-    ctx.fill();
-}
+
 
