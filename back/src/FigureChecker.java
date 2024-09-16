@@ -28,12 +28,12 @@ public class FigureChecker {
     private boolean checkTriangle(double x, double y, double r){
         boolean check = x<=r/2;
         logger.info("check: %s".formatted(check));
-        return y >= 0 && y <= r && x >= 0 && x <= r / 2 && y <= 2 * (-x + r) - 1;
+        return y >= 0 && y <= r && x >= 0 && x <= r / 2 && y <= -2 * x + r;
     }
     private boolean checkRectangle(double x, double y, double r){
         return x >= (-r) && y <= r;
     }
     private boolean checkCircle(double x, double y, double r){
-        return Math.sqrt(x*x + y*y) <= r;
+        return Math.sqrt(x*x + y*y) <= 0.5*r;
     }
 }

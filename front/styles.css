@@ -249,7 +249,7 @@ canvas {
     margin: 0 0 0 5%;
     border-collapse: collapse;
     overflow: scroll;
-    max-height: 600px;
+    max-height: 630px;
     height: fit-content;
     transition: all .3s ease-in-out;
 }

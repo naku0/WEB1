@@ -35,9 +35,8 @@ function sendData(x, y, r) {
         response.json()
             .then(data => {
                 addToTable(x.value,y.value,r.value,data.status,data.time,new Date().toLocaleTimeString());
-                drawDot(data.x, data.y, data.r, data.status);
                 console.log("row added");
-                console.log("dot has been drawn");
+                drawDot(x.value, y.value, r.value, data.status);
                 y.classList.remove("wrong");
                 r.classList.remove("wrong");
             });
@@ -77,12 +76,12 @@ function addToTable(x, y, r, status, time, data){
 function drawDot(x, y, r, status) {
     const canvas = document.getElementById('canvas');
     const ctx = canvas.getContext('2d');
-    console.log("dot has been drawn");
-    const formula = (coord, radius) => (200 + coord/radius * 40) ;
-    ctx.fillStyle = status ? 'green' : 'red';
+    const formula = (coord, radius) => (200 + (4*coord * 40)/radius);
     ctx.beginPath();
-    ctx.arc(formula(x,r), formula(y,r), 5, 0, 2 * Math.PI);
-    ctx.resetTransform();
+    ctx.fillStyle = status ? '#A8E4A0' : '#EE204D';
+    ctx.moveTo(200,200);
+    ctx.arc(formula(x, r), formula(-y, r), 5, 0, 2 * Math.PI);
     ctx.fill();
     ctx.closePath();
+    console.log("dot has been drawn");
 }
