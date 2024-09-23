@@ -220,6 +220,13 @@ input.wrong {
     cursor: pointer;
 }
 
+p.error{
+    font-size: 0.8em;
+    color: var(--red);
+    display: flex;
+    place-content: center;
+}
+
 input:hover {
     border: 2px solid var(--blue);
     border-radius: 30px;
