@@ -1,4 +1,4 @@
-const url = "/api/";
+const url = "http://localhost:8008/fcgi-bin/web1.jar";
 
 function submitForm(event) {
     event.preventDefault();
@@ -8,12 +8,13 @@ function submitForm(event) {
     if (!x) {
         createError("x не определен");
     } else {
+        document.querySelectorAll(".error").forEach(el => el.remove());
         y.classList.remove("wrong");
         r.classList.remove("wrong");
         Promise.all([
             checkY(y),
             checkR(r)
-        ]).then(() =>{
+        ]).then(() => {
             sendData(x, y, r);
         }).catch((error) => {
             createError(error);
@@ -43,8 +44,7 @@ const checkR = (value) => {
     });
 }
 
-const createError = (message) =>{
-    document.querySelectorAll(".error").forEach(el => el.remove());
+const createError = (message) => {
     const error = document.createElement("p");
     error.className = "error";
     error.textContent = message;
@@ -54,7 +54,7 @@ const createError = (message) =>{
 function sendData(x, y, r) {
     fetch(url, {
         "method": 'POST',
-        "header": {
+        "headers": {
             'Content-Type': 'application/json'
         },
         "body": JSON.stringify(
@@ -67,12 +67,14 @@ function sendData(x, y, r) {
     }).then(response => {
         response.json()
             .then(data => {
+                console.log(`WE GOT ${data}`)
                 addToTable(x.value, y.value, r.value, data.status, data.time, new Date().toLocaleTimeString());
-                console.log("row added");
                 drawDot(x.value, y.value, r.value, data.status);
                 y.classList.remove("wrong");
                 r.classList.remove("wrong");
-            });
+            }).catch(err => {
+                console.log(response);
+        });
     });
 }
 

@@ -8,6 +8,5 @@ public class Main {
         RequestHandler requestHandler = new RequestHandler();
         ResponseHandler responseHandler = new ResponseHandler(requestHandler,figureChecker,startTime);
         responseHandler.sendResponse();
-
     }
 }

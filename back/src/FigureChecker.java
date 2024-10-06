@@ -9,7 +9,6 @@ public class FigureChecker {
 
     public boolean checkSpot(double[] data){
         logger.setLevel(Level.INFO);
-
         return checkAxis(data[0], data[1], data[2]);
     }
 
@@ -27,7 +26,6 @@ public class FigureChecker {
 
     private boolean checkTriangle(double x, double y, double r){
         boolean check = x<=r/2;
-        logger.info("check: %s".formatted(check));
         return y >= 0 && y <= r && x >= 0 && x <= r / 2 && y <= -2 * x + r;
     }
     private boolean checkRectangle(double x, double y, double r){
