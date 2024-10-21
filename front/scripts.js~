@@ -64,18 +64,18 @@ function sendData(x, y, r) {
                 r: parseFloat(r.value)
             }
         )
-    })
-        .then(response => { response.json()
-                .then(data => {
-                    console.log(`WE GOT ${data}`)
-                    addToTable(x.value, y.value, r.value, data.status, data.time, new Date().toLocaleTimeString());
-                    drawDot(x.value, y.value, r.value, data.status);
-                    y.classList.remove("wrong");
-                    r.classList.remove("wrong");
-                })
-                .catch(error => {
-                    console.log(error);
-                });
+    }).then(response => {
+        response.json()
+            .then(data => {
+                console.log(`WE GOT ${data}`)
+                addToTable(x.value, y.value, r.value, data.status, data.time, new Date().toLocaleTimeString());
+                drawDot(x.value, y.value, r.value, data.status);
+                y.classList.remove("wrong");
+                r.classList.remove("wrong");
+            })
+            .catch(error => {
+                console.log(error);
+            })
         })
         .catch(e => {
             console.log(e);

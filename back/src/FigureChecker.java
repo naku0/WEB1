@@ -7,21 +7,24 @@ import static java.util.Objects.isNull;
 public class FigureChecker {
     Logger logger = Logger.getLogger(this.getClass().getName());;
 
-    public boolean checkSpot(double[] data){
+    public boolean checkSpot(double[] data) throws InvalidDataException {
         logger.setLevel(Level.INFO);
         return checkAxis(data[0], data[1], data[2]);
     }
 
-    private boolean checkAxis(double x, double y, double r){
-        if(x*r>=0 && y*r>=0){
-            return checkTriangle(x, y, r);
-        }else if(x*r<=0 && y*r>=0){
-            return checkRectangle(x, y, r);
-        }else if(x*r<=0 && y*r<=0){
-            return checkCircle(x, y, r);
-        }else if(x*r>=0 && y*r<=0){
-            return false;
-        }else return x == 0 && y == 0;
+    private boolean checkAxis(double x, double y, double r) throws InvalidDataException{
+        if (!(x>=-3 && x<=5 && y>=-3 && y<=5 && r>=1 && r<=4)) throw new InvalidDataException("Wrong parameters");
+        else {
+            if (x * r >= 0 && y * r >= 0) {
+                return checkTriangle(x, y, r);
+            } else if (x * r <= 0 && y * r >= 0) {
+                return checkRectangle(x, y, r);
+            } else if (x * r <= 0 && y * r <= 0) {
+                return checkCircle(x, y, r);
+            } else if (x * r >= 0 && y * r <= 0) {
+                return false;
+            } else return x == 0 && y == 0;
+        }
     }
 
     private boolean checkTriangle(double x, double y, double r){

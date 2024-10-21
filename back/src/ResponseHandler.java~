@@ -54,7 +54,7 @@ public class ResponseHandler {
                 } catch (InvalidDataException e) {
                     var content = """
                             {
-                            "error" : "%s"
+                            "error" : %s
                             }
                             """;
 
